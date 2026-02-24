@@ -8,7 +8,7 @@ function App() {
   const changeName = (e) => {
     e.preventDefault();
     if (newName.trim() === "") return;
-    setName(newName);
+    setName(newName.trim());
     setNewName("");
   };
 
@@ -24,6 +24,7 @@ function App() {
         <input
           type="text"
           value={newName}
+          placeholder="Add a name"
           onChange={(e) => setNewName(e.target.value)}
         />
         <button type="submit">Change Name</button>
